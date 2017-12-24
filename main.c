@@ -64,17 +64,8 @@ pre_auton( ) {
 task
 autonomous( ) {
 	clearAllEncoder();
-	switch(iAuton) {
-		case 1:  bSide = false; push();     break;
-		case 2:  bSide = true;  push();     break;
-		case 3:  bSide = false; statGoal(); break;
-		case 4:  bSide = true;  statGoal(); break;
-		case 5:  bSide = false; mogoFive(); break;
-		case 6:  bSide = true;  mogoFive(); break;
-		case 7:  bSide = false; mogoTen();  break;
-		case 8:  bSide = true;  mogoTen();  break;
-		default: break;
-	}
+	statGoal(); 
+	bSide = false;
 	auton( 0, 0, 0, 0, 0, 0 );
 }
 
